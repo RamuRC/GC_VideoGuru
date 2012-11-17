@@ -1,0 +1,42 @@
+<h1>Catalog</h1>
+
+<div id="book-list">
+<table>
+    <th>Title</th>
+    <th>Price/per book</th>
+	<th>Quantity</th>
+  </tr>  
+
+  <% for order in @mult_orders %>
+	  <td><%= order.book_title %>
+	  <td><%= order.price %>
+	  <td><%= order.quantity %>
+    </tr>
+  <% end %>
+</table>
+<br>
+<br>
+
+<%= form_for(@user) do |f| %>
+  
+  <div class="field">
+    <%= f.label :address_line %><br />
+    <%= f.text_field :address_line %>
+  </div>
+  <div class="field">
+    <%= f.label :city %><br />
+    <%= f.text_field :city %>
+  </div>
+  <div class="field">
+    <%= f.label :state %><br />
+    <%= f.text_field :state %>
+  </div>
+  <div class="field">
+    <%= f.label :zipcode %><br />
+    <%= f.text_field :zipcode %>
+  </div>
+<% end %>
+
+<br><br>
+<td><%= link_to "Done", done_path %>
+</div>

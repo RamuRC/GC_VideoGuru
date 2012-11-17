@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/u11_ror/!svn/ver/1535/ahmed_puthupparambil/project/Bookstore/app/views/layouts
+END
+_header.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/u11_ror/!svn/ver/1535/ahmed_puthupparambil/project/Bookstore/app/views/layouts/_header.html.erb
+END
+shop.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/u11_ror/!svn/ver/1535/ahmed_puthupparambil/project/Bookstore/app/views/layouts/shop.html.erb
+END
+books.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/u11_ror/!svn/ver/1535/ahmed_puthupparambil/project/Bookstore/app/views/layouts/books.html.erb
+END
+application.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/u11_ror/!svn/ver/1535/ahmed_puthupparambil/project/Bookstore/app/views/layouts/application.html.erb
+END

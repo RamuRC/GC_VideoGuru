@@ -1,0 +1,40 @@
+<h1>Catalog</h1>;
+  <% form_tag books_search_path, :method => 'get' do %>
+  <p>
+    <%= text_field_tag (:query) %>
+    <%= submit_tag "Search by Title" %>
+  </p>
+  <% end %>
+  
+  <% form_tag authors_search_path, :method => 'get' do %>
+  <p>
+    <%= text_field_tag (:query) %>
+    <%= submit_tag "Search by Director" %>
+  </p>
+  <% end %>
+
+<div id="title-list">
+<table>
+    <th></th>
+    <th>Title</th>
+    <th>Director</th>
+    <th>Rating</th>
+  </tr>  
+  <%= will_paginate @titles, :param_name => 'books_page' %>
+  <% for title in @titles %>
+      <td>
+		  <img class="list-image" src="https://s3.amazonaws.com/videoguru/images/<%= title.id %>.jpg" width="100" />
+  	  </td>
+	  <td>
+	    <span class="list-movie-name"><%= link_to h(title.movie_name), :action => "watch_video", :id => title %></span><br />
+			  </td>
+	  <td><%= title.director_name %>
+	  <td><%= title.rating %>
+	  <td><%= button_to "Watch", :action => :add_to_cart, :id => title %>
+    </tr>
+  <% end %>
+</table>
+<br>
+<br>
+
+</div>

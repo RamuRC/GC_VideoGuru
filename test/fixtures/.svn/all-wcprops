@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/u11_ror/!svn/ver/2025/ahmed_puthupparambil/project/Bookstore/test/fixtures
+END
+users.yml
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/u11_ror/!svn/ver/2025/ahmed_puthupparambil/project/Bookstore/test/fixtures/users.yml
+END
+authors.yml
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/u11_ror/!svn/ver/2025/ahmed_puthupparambil/project/Bookstore/test/fixtures/authors.yml
+END
+books.yml
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/u11_ror/!svn/ver/2025/ahmed_puthupparambil/project/Bookstore/test/fixtures/books.yml
+END
+orders.yml
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/u11_ror/!svn/ver/2025/ahmed_puthupparambil/project/Bookstore/test/fixtures/orders.yml
+END

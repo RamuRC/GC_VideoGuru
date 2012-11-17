@@ -1,0 +1,20 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+# This model initially had no columns defined.  If you add columns to the
+# model remove the '{}' from the fixture names and add the columns immediately
+# below each fixture, per the syntax in the comments below
+#
+one:
+  status: 1
+  per_order_id: 1
+  book_title: "In Human Bondage"
+  price: 14.99
+  quantity: 0
+
+two:
+  status: 2
+  per_order_id: 2
+  book_title: "MyString"
+  price: 14.99
+  quantity: 2 
+  

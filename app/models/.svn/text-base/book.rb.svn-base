@@ -1,0 +1,42 @@
+class Book < ActiveRecord::Base
+attr_accessible :inventory, :title, :publisher, :price, :image_url
+
+  has_and_belongs_to_many :authors
+  validates_uniqueness_of :id
+  validates_uniqueness_of :title, :scope => :publisher
+  validates_presence_of :title, :inventory, :price, :image_url, :publisher
+  validates_numericality_of :price
+  validates_numericality_of :inventory, :only_integer => true
+  validates_format_of :image_url,
+    :with		=> %r{\.(gif|jpg|png)$}i,
+    :message	=> "must be a URL for a GIF, JPG, or PNG image"
+  
+  def decr_inventory(quantity)
+    self.inventory = self.inventory - quantity
+	redirect_to :controller => 'shop', :action => 'index' unless self.save
+  end
+  
+  protected
+  def validate
+    errors.add(:price, "should be at least $0.01") if price.nil? || price < 0.01
+  end
+  
+  def self.find_books_for_sale
+    find(:all, :order => "title")
+  end
+  
+  # Searches for books when called from the controller using like
+  def self.search(query)
+    title = query.to_s.gsub(/%/,"\%")
+	books_arr = []
+	books_arr << Book.find_by_title(title) unless Book.find_by_title(title) == nil
+	title.split(' ').each do |i|
+	  books1 = Book.find(:all, :conditions => ["title like ?", "%#{i}%"])
+	  books1.each do |book|
+		books_arr << book unless books_arr.include?(book)
+	  end
+	end
+	return books_arr
+  end
+
+end

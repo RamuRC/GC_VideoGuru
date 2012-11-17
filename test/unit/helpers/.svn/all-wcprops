@@ -1,0 +1,53 @@
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/u11_ror/!svn/ver/1519/ahmed_puthupparambil/project/Bookstore/test/unit/helpers
+END
+users_helper_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/u11_ror/!svn/ver/1519/ahmed_puthupparambil/project/Bookstore/test/unit/helpers/users_helper_test.rb
+END
+authors_helper_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/u11_ror/!svn/ver/1519/ahmed_puthupparambil/project/Bookstore/test/unit/helpers/authors_helper_test.rb
+END
+sessions_helper_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/u11_ror/!svn/ver/1519/ahmed_puthupparambil/project/Bookstore/test/unit/helpers/sessions_helper_test.rb
+END
+shop_helper_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/u11_ror/!svn/ver/1519/ahmed_puthupparambil/project/Bookstore/test/unit/helpers/shop_helper_test.rb
+END
+order_helper_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/u11_ror/!svn/ver/1519/ahmed_puthupparambil/project/Bookstore/test/unit/helpers/order_helper_test.rb
+END
+books_helper_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/u11_ror/!svn/ver/1519/ahmed_puthupparambil/project/Bookstore/test/unit/helpers/books_helper_test.rb
+END
+orders_helper_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/u11_ror/!svn/ver/1519/ahmed_puthupparambil/project/Bookstore/test/unit/helpers/orders_helper_test.rb
+END
+user_helper_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/u11_ror/!svn/ver/1519/ahmed_puthupparambil/project/Bookstore/test/unit/helpers/user_helper_test.rb
+END

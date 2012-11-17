@@ -1,0 +1,17 @@
+<div id="Sample" data_video=@title.movie_name></div>
+<h1><%= @title.movie_name %></h1>
+<p>
+  <b>Director:</b>
+  <%= @title.director_name %>
+</p>
+
+<p>
+  <b>Rating:</b>
+  <%= @title.rating %>
+</p>
+
+
+
+<video id="trailer"  controls poster="https://s3.amazonaws.com/videoguru/images/<%= @title.id %>.jpg" width="634" height="428">
+ <source src="https://s3.amazonaws.com/videoguru/videos/<%= @title.id %>_480p.webm">
+</video>

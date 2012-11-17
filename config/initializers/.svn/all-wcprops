@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/u11_ror/!svn/ver/1519/ahmed_puthupparambil/project/Bookstore/config/initializers
+END
+inflections.rb
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/u11_ror/!svn/ver/1519/ahmed_puthupparambil/project/Bookstore/config/initializers/inflections.rb
+END
+session_store.rb
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/u11_ror/!svn/ver/1519/ahmed_puthupparambil/project/Bookstore/config/initializers/session_store.rb
+END
+secret_token.rb
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/u11_ror/!svn/ver/1519/ahmed_puthupparambil/project/Bookstore/config/initializers/secret_token.rb
+END
+backtrace_silencers.rb
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/u11_ror/!svn/ver/1519/ahmed_puthupparambil/project/Bookstore/config/initializers/backtrace_silencers.rb
+END
+mime_types.rb
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/u11_ror/!svn/ver/1519/ahmed_puthupparambil/project/Bookstore/config/initializers/mime_types.rb
+END

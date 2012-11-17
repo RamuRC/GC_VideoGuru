@@ -1,0 +1,27 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  title: MyString
+  publisher: MyString
+  price: 9.99
+  inventory: 10
+  image_url: /images/Koala.jpg
+
+# two:
+  # title: MyString
+  # publisher: MyString
+  # num_pages: 1
+
+book1:
+  title: In Human Bondage
+  publisher: Penguin
+  price: 9.99
+  inventory: 10
+  image_url: /images/Koala.jpg
+
+book2:
+  title: The Kite Runner
+  publisher: Penguin
+  price: 14.99
+  inventory: 100
+  image_url: /images/Penguin.jpg

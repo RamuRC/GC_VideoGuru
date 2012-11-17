@@ -1,0 +1,46 @@
+<h1>Catalog</h1>
+
+  <% form_tag books_search_path, :method => 'get' do %>
+  <p>
+    <%= text_field_tag (:query) %>
+    <%= submit_tag "Search by Book Title" %>
+  </p>
+  <% end %>
+  
+  <% form_tag authors_search_path, :method => 'get' do %>
+  <p>
+    <%= text_field_tag (:query) %>
+    <%= submit_tag "Search by Author" %>
+  </p>
+  <% end %>
+
+<div id="book-list">
+<table>
+    <th>Image</th>
+    <th>Title</th>
+    <th>Publisher</th>
+    <th>Price</th>
+  </tr>  
+  <%= will_paginate @books, :param_name => 'books_page' %>
+  <% for book in @books %>
+      <td>
+		  <img class="list-image" src="<%= book.image_url %>" width="100" />
+  	  </td>
+	  <td>
+	    <span class="list-title"><%= h(book.title) + " " %></span><br />
+		<% for author in book.authors %>
+		  <%= h(author.first_name) %>
+		  <%= h(author.last_name) %>
+		  <br>
+		<% end %>
+	  </td>
+	  <td><%= book.publisher %>
+	  <td><%= book.price %>
+	  <td><%= button_to "Add to Cart", :action => :add_to_cart, :id => book %>
+    </tr>
+  <% end %>
+</table>
+<br>
+<br>
+<%= link_to "View Cart", :action => "view_cart" %>
+</div>

@@ -1,0 +1,32 @@
+<ul>
+
+<table id = carttable>
+<th>Title</th>
+<th>Price</th>
+</tr>
+<% for item in @cart.items %>
+	<%= render :partial => 'cartitems', :locals => {:item => item} %>
+	</tr>
+<% end %>
+</table>
+
+<br>
+Total
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+<%= number_to_currency h(@cart.total_price) %>
+</ul>
+<br><br>
+
+  <% if signed_in? %>
+    <%= button_to "Checkout", checkout_path, :class => "checkout_button round" %>
+  <% else %>
+    You must sign-in to checkout!
+	<br>
+    <%= link_to "Sign up now!", signup_path, :class => "signup_button round" %>
+	&nbsp
+    <%= link_to "Sign in", signin_path %>
+  <% end %>
+<br><br>
+<%= link_to "Clear Cart", :action => "clear_cart" %>
+&nbsp
+<%= link_to "Return to Shopping", :action => "index" %>

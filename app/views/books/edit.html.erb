@@ -1,0 +1,20 @@
+<h1>Editing book</h1>
+
+<%= render 'form' %>
+<br>
+If you do not want to add a new author, use one of the names below.
+<br><br>
+Authors already associated with this book. 
+<br>
+<td>
+  <% for author in @book.authors %>
+		  <%= h(author.first_name) %>
+		  <%= h(author.last_name) %>
+		  <br>
+		<% end %>
+  </td>
+
+<br>
+<br>  
+<%= link_to 'Show', @book %> |
+<%= link_to 'Back', books_path %>

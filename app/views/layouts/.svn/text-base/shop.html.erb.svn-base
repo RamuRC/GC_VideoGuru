@@ -1,0 +1,51 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+       "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<%= render 'layouts/header' %>
+<head>
+  <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+  <title>Books: <%= controller.action_name %></title>
+  <%= stylesheet_link_tag 'scaffold', 'book' %>
+</head>
+
+<% flash.each do |key, msg| %>
+  <%= content_tag :div, msg, :class => [key, " message"], :id => "notice_ #{key}" %>
+  <%= content_tag :script, :type => "text/javascript" do -%>
+	setTimeout("new Effect.Highlite('notice_<%= key %>');", 1500);
+  <% end %>
+<% end %>
+<br>
+
+<body>
+<div id="container">
+	<div id="top">
+	<h1>Amazon Must Die</h1>
+	</div>
+	
+	<div id="leftnav">
+	<p>
+	Three guys, stranded on a desert island, find a magic lantern containing a genie, who grants them each one wish. The first guy wishes he was off the island and back home. The second guy wishes the same. The third guy says: I am lonely. I wish my friends were back here.
+	</p>
+	</div>
+	
+	<div id="rightnav">
+	<p>
+	Cart
+	<%= render :partial => 'cart' %>
+	</p>
+	</div>
+	
+	<div id="content">
+    <p style="color: green"><%= flash[:notice] %></p>
+    <%= yield  %>
+	</div>
+	
+	<div id="footer">
+	Contact the webmaster at abc@gmail.com
+	</div>
+	
+</div>
+
+</body>
+</html>

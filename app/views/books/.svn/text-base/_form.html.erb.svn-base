@@ -1,0 +1,54 @@
+<%= form_for(@book) do |f| %>
+  <% if @book.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@book.errors.count, "error") %> prohibited this book from being saved:</h2>
+
+      <ul>
+      <% @book.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :title %><br />
+    <%= f.text_field :title, :placeholder => 'Enter title here' %>
+  </div>
+  <div class="field">
+    <%= f.label :publisher %><br />
+    <%= f.text_field :publisher, :placeholder => 'Publisher name' %>
+  </div>
+  <div class="field">
+    <%= f.label :price %><br />
+    <%= f.text_field :price, :placeholder => 'Enter a number greater than 0.01' %>
+  </div>
+  <div class="field">
+    <%= f.label :inventory %><br />
+	<%= f.text_field :inventory, :placeholder => 'Number of this book currently in inventory' %>
+  </div>
+  <div class="field">
+    <%= f.label :image_url %><br />
+	<%= f.text_field :image_url, :placeholder => 'Enter image location' %>
+  </div>
+  <br>
+  <b>Add an author for this book. To add more authors to this book, Edit the book.</b>
+  <br><br>
+
+  <b> For Editing Only: Check boxes for authors you want to remove. Minimum 1 author required. </b>
+  <br>
+  <ul class="checkbox-list">
+    <% @book.authors.each do |author| -%>
+      <li><%= check_box_tag 'checks[]', author.id %> <%= author.first_name %> <%= author.last_name %></li>
+    <% end -%>
+  </ul>
+  
+  <br><br>
+  <%= label_tag(:q, "First Name:") %>
+  <%= text_field_tag(:q) %>
+  <br>
+  <%= label_tag(:r, "Last Name:") %>
+  <%= text_field_tag(:r) %>
+  <%= submit_tag("Create") %>
+
+<% end %>

@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/u11_ror/!svn/ver/2044/ahmed_puthupparambil/project/Bookstore/db
+END
+schema.rb
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/u11_ror/!svn/ver/1674/ahmed_puthupparambil/project/Bookstore/db/schema.rb
+END
+test.sqlite3
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/u11_ror/!svn/ver/2044/ahmed_puthupparambil/project/Bookstore/db/test.sqlite3
+END
+development.sqlite3
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/u11_ror/!svn/ver/2044/ahmed_puthupparambil/project/Bookstore/db/development.sqlite3
+END
+seeds.rb
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/u11_ror/!svn/ver/1519/ahmed_puthupparambil/project/Bookstore/db/seeds.rb
+END

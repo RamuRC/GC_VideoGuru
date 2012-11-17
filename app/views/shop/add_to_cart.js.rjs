@@ -1,0 +1,2 @@
+page.insert_html :bottom, 'carttable', render(:partial => 'cartitems', :locals => {:item => @item})
+page.visual_effect :highlight, "item_#{@item.id}"

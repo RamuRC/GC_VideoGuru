@@ -1,0 +1,6 @@
+<h1>Your Cart</h1>
+
+<%= render :partial => 'cart' %>
+
+<%= link_to "Clear Cart", :action => "clear_cart" %>
+<%= link_to "Return to Shopping", :action => "index" %>

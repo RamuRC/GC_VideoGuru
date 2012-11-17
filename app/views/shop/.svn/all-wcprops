@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/u11_ror/!svn/ver/1693/ahmed_puthupparambil/project/Bookstore/app/views/shop
+END
+index.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/u11_ror/!svn/ver/1535/ahmed_puthupparambil/project/Bookstore/app/views/shop/index.html.erb
+END
+_cart.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/u11_ror/!svn/ver/1535/ahmed_puthupparambil/project/Bookstore/app/views/shop/_cart.html.erb
+END
+_cartitems.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/u11_ror/!svn/ver/1535/ahmed_puthupparambil/project/Bookstore/app/views/shop/_cartitems.html.erb
+END
+clear_cart.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/u11_ror/!svn/ver/1535/ahmed_puthupparambil/project/Bookstore/app/views/shop/clear_cart.html.erb
+END
+add_to_cart.js.rjs
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/u11_ror/!svn/ver/1693/ahmed_puthupparambil/project/Bookstore/app/views/shop/add_to_cart.js.rjs
+END
+add_to_cart.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/u11_ror/!svn/ver/1535/ahmed_puthupparambil/project/Bookstore/app/views/shop/add_to_cart.html.erb
+END
+view_cart.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/u11_ror/!svn/ver/1535/ahmed_puthupparambil/project/Bookstore/app/views/shop/view_cart.html.erb
+END

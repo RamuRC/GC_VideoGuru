@@ -1,0 +1,39 @@
+<h1>Project</h1>
+
+<div id="book-list">
+<table>
+    <th>Image</th>
+    <th>Title</th>
+    <th>Publisher</th>
+    <th>Price</th>
+	<th>Inventory</th>
+  </tr>  
+  <% for book in @books %>
+      <td>
+		  <img class="list-image" src="<%= book.image_url %>" width="100" />
+  	  </td>
+	  <td>
+	    <span class="list-title"><%= h(book.title) %></span><br />
+		<% for author in book.authors %>
+		  <%= h(author.first_name) %>
+		  <%= h(author.last_name) %>
+		  <br>
+		<% end %>
+	  </td>
+	  <td><%= book.publisher %>
+	  <td><%= book.price %>
+	  <td><%= book.inventory %>
+	  <td><%= link_to 'Show', book %></td>
+	  <% if get_current_user.admin? %>
+        <td><%= link_to 'Edit', edit_book_path(book) %></td>
+        <td><%= link_to 'Destroy', book, :confirm => 'Are you sure?', :method => :delete %></td>
+	  <% end %>
+    </tr>
+<% end %>
+</table>
+
+<br>
+<% if get_current_user.admin? %>
+  <%= link_to 'New Book', new_book_path %>
+<% end %>
+</div>

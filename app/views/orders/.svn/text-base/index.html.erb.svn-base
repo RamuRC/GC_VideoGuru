@@ -1,0 +1,38 @@
+<h1>User Orders</h1>
+<table>
+<td> Book Tile </td>
+<td> Price/book </td>
+<td> Quantity </td>
+<td> Username </td>
+<td> Shipping Status </td>
+</tr>
+
+<ul class="orders">
+  <% @user.orders.each do |order| %>
+      <td> <%= order.book_title %> </td>
+	  <td> <%= order.price %> </td>
+	  <td> <%= order.quantity %> </td>
+	  <td> <%= @user.name %></td>
+	  <% if order.status == 2 %>
+		<td> Shipped </td>
+	  <% end %>
+	</tr>
+  <% end %>
+	
+  <% if get_current_user.admin? %>
+	<% @users.each do |user| %>
+      <% user.orders.each do |order| %>
+        <td> <%= order.book_title %> </td>
+	    <td> <%= order.price %> </td>
+		<td> <%= order.quantity %> </td>
+		<td> <%= user.name %> </td>		
+		<% if order.status == 2 %>
+		<td> Shipped </td>
+		<% end %>
+		</tr>
+	  <% end %>
+	<% end %>
+  <% end %>
+<%= link_to "Return to Shopping", :controller => 'shop', :action => "index" %>
+<br>
+</ul>

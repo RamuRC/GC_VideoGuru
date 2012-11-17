@@ -1,0 +1,89 @@
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/u11_ror/!svn/ver/1674/ahmed_puthupparambil/project/Bookstore/db/migrate
+END
+20110629210149_add_image_url_to_book.rb
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svn/u11_ror/!svn/ver/1519/ahmed_puthupparambil/project/Bookstore/db/migrate/20110629210149_add_image_url_to_book.rb
+END
+20110704161051_create_orders.rb
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/u11_ror/!svn/ver/1519/ahmed_puthupparambil/project/Bookstore/db/migrate/20110704161051_create_orders.rb
+END
+20110627211433_create_books.rb
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/u11_ror/!svn/ver/1519/ahmed_puthupparambil/project/Bookstore/db/migrate/20110627211433_create_books.rb
+END
+20110627212630_authors_books.rb
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/u11_ror/!svn/ver/1519/ahmed_puthupparambil/project/Bookstore/db/migrate/20110627212630_authors_books.rb
+END
+20110630162801_create_users.rb
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/u11_ror/!svn/ver/1519/ahmed_puthupparambil/project/Bookstore/db/migrate/20110630162801_create_users.rb
+END
+20110630172653_add_salt_to_users.rb
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/u11_ror/!svn/ver/1519/ahmed_puthupparambil/project/Bookstore/db/migrate/20110630172653_add_salt_to_users.rb
+END
+20110707131234_add_quantity_to_order.rb
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svn/u11_ror/!svn/ver/1674/ahmed_puthupparambil/project/Bookstore/db/migrate/20110707131234_add_quantity_to_order.rb
+END
+20110627211313_create_authors.rb
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/u11_ror/!svn/ver/1519/ahmed_puthupparambil/project/Bookstore/db/migrate/20110627211313_create_authors.rb
+END
+20110707231905_add_test_data.rb
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/u11_ror/!svn/ver/1674/ahmed_puthupparambil/project/Bookstore/db/migrate/20110707231905_add_test_data.rb
+END
+20110629205304_add_price_to_book.rb
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/u11_ror/!svn/ver/1519/ahmed_puthupparambil/project/Bookstore/db/migrate/20110629205304_add_price_to_book.rb
+END
+20110630030947_add_sessions_table.rb
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/u11_ror/!svn/ver/1519/ahmed_puthupparambil/project/Bookstore/db/migrate/20110630030947_add_sessions_table.rb
+END
+20110701175715_add_admin_to_users.rb
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/u11_ror/!svn/ver/1519/ahmed_puthupparambil/project/Bookstore/db/migrate/20110701175715_add_admin_to_users.rb
+END
+20110703222250_add_shipping_address_to_user.rb
+K 25
+svn:wc:ra_dav:version-url
+V 123
+/svn/u11_ror/!svn/ver/1519/ahmed_puthupparambil/project/Bookstore/db/migrate/20110703222250_add_shipping_address_to_user.rb
+END
+20110630172303_add_password_to_users.rb
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svn/u11_ror/!svn/ver/1519/ahmed_puthupparambil/project/Bookstore/db/migrate/20110630172303_add_password_to_users.rb
+END
