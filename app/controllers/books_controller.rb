@@ -1,93 +1,115 @@
 class BooksController < ApplicationController
-  #before_filter :run_before, :except => [:index, :show, :new, :edit, :destroy, :add_to_cart, :get_cart, :clear_cart, :view_cart]
+  before_filter :run_before, :except => [:index, :show, :new, :edit, :destroy, :add_to_cart, :get_cart, :clear_cart, :view_cart]
   
   def run_before
-    params[:title][:movie_name] = params[:title][:movie_name].humanize.titleize
-	params[:title][:director_name] = params[:title][:director_name].humanize.titleize
+    params[:book][:title] = params[:book][:title].humanize.titleize
+	params[:book][:publisher] = params[:book][:publisher].humanize.titleize
   end
   
-  # GET /titles
-  # GET /titles.xml
+  def create_author(first, last)
+    first = first.humanize.titleize
+	last = last.humanize.titleize
+    @author = Author.find_by_first_name_and_last_name(first, last)
+    if @author == nil
+	  name = {}
+	  name["first_name"] = first
+	  name["last_name"] = last
+	  @author = Author.new(name) 
+	  @author = nil unless @author.save
+	end
+  end
+  
+  # GET /books
+  # GET /books.xml
   def index
-    @titles = Title.all
-	# @title = Title.new
+    @books = Book.all
+	# @book = Book.new
 
     respond_to do |format|
       format.html # index.html.erb
-      format.xml  { render :xml => @titles }
+      format.xml  { render :xml => @books }
     end
   end
 
-  # GET /titles/1
-  # GET /titles/1.xml
+  # GET /books/1
+  # GET /books/1.xml
   def show
-    @title = Title.find(params[:id])
+    @book = Book.find(params[:id])
 
     respond_to do |format|
       format.html # show.html.erb
-      format.xml  { render :xml => @title }
+      format.xml  { render :xml => @book }
     end
   end
 
-  # GET /titles/new
-  # GET /titles/new.xml
+  # GET /books/new
+  # GET /books/new.xml
   def new
-    @title = Title.new
+    @book = Book.new
 
     respond_to do |format|
       format.html # new.html.erb
-      format.xml  { render :xml => @title }
+      format.xml  { render :xml => @book }
     end
   end
 
-  # GET /titles/1/edit
+  # GET /books/1/edit
   def edit
-    @title = Title.find(params[:id])
+    @book = Book.find(params[:id])
   end
 
-  # POST /titles
-  # POST /titles.xml
+  # POST /books
+  # POST /books.xml
   def create
-    @title = Title.new(params[:title])
-	
-    respond_to do |format|
-	 if @title.save
-	  @author.titles << @title unless @author.titles.include? @title
-	  @author = nil
-	  format.html { redirect_to(@title, :notice => 'Title was successfully created.') }
-	  # format.js
-	  format.xml  { render :xml => @title, :status => :created, :location => @title }
-	 else
-	  format.html { render :action => "new" }
-	  # format.js { render :action => 'create_error' }
-	  format.xml  { render :xml => @title.errors, :status => :unprocessable_entity }
-	 end
-  end
-	
+    @book = Book.new(params[:book])
+	create_author(params[:q],params[:r])
 
-  # PUT /titles/1
-  # PUT /titles/1.xml
+	if @author != nil
+      respond_to do |format|
+        if @book.save
+	      @author.books << @book unless @author.books.include? @book
+		  @author = nil
+          format.html { redirect_to(@book, :notice => 'Book was successfully created.') }
+		  # format.js
+          format.xml  { render :xml => @book, :status => :created, :location => @book }
+        else
+          format.html { render :action => "new" }
+		  # format.js { render :action => 'create_error' }
+          format.xml  { render :xml => @book.errors, :status => :unprocessable_entity }
+        end
+      end
+	else
+	  respond_to do |format|
+	    format.html { render :action => "new" }
+		# correc the line below
+		format.xml { render :xml => {@author=>["Author name is not valid"]}, :status => :unprocessable_entity }
+	  end
+	end
+  end
+
+  # PUT /books/1
+  # PUT /books/1.xml
   def update
-    @title = Title.find(params[:id])
+    @book = Book.find(params[:id])
 	create_author(params[:q],params[:r])
 
     if @author != nil
 	  respond_to do |format|
-        if @title.update_attributes(params[:title])
-	      @author.titles << @title unless @author.titles.include? @title
+        if @book.update_attributes(params[:book])
+	      @author.books << @book unless @author.books.include? @book
 		  if params[:checks] != nil
 	        params[:checks].each do |s|
-		      if @title.authors.count > 1
-	            @title.authors.delete(Author.find_by_id(s))
+		      if @book.authors.count > 1
+	            @book.authors.delete(Author.find_by_id(s))
 	          end
   	        end
 	      end
 		  @author = nil
-          format.html { redirect_to(@title, :notice => 'Title was successfully updated.') }
+          format.html { redirect_to(@book, :notice => 'Book was successfully updated.') }
           format.xml  { head :ok }
         else
           format.html { render :action => "edit" }
-          format.xml  { render :xml => @title.errors, :status => :unprocessable_entity }
+          format.xml  { render :xml => @book.errors, :status => :unprocessable_entity }
         end
 	  end
 	else
@@ -102,8 +124,8 @@ class BooksController < ApplicationController
 
   def destroy
     puts "***************"
-	@title = Title.find(params[:id])
-    @title.destroy
+	@book = Book.find(params[:id])
+    @book.destroy
 
     respond_to do |format|
       format.html { redirect_to(books_url) }
@@ -114,7 +136,7 @@ class BooksController < ApplicationController
   
   def add_to_cart
     @cart = get_cart
-    @cart.add_to_cart(Title.find(params[:id]))
+    @cart.add_to_cart(Book.find(params[:id]))
   end
 
   def get_cart

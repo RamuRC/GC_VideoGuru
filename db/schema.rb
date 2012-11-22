@@ -12,41 +12,6 @@
 
 ActiveRecord::Schema.define(:version => 20110707231905) do
 
-  create_table "authors", :force => true do |t|
-    t.string   "first_name"
-    t.string   "last_name"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "authors_books", :id => false, :force => true do |t|
-    t.integer  "author_id"
-    t.integer  "book_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "books", :force => true do |t|
-    t.string   "title"
-    t.string   "publisher"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.decimal  "price",      :default => 0.0
-    t.integer  "inventory",  :default => 0
-    t.string   "image_url"
-  end
-
-  create_table "orders", :force => true do |t|
-    t.integer  "user_id"
-    t.integer  "status"
-    t.integer  "per_order_id"
-    t.string   "book_title"
-    t.decimal  "price"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.integer  "quantity"
-  end
-
   create_table "sessions", :force => true do |t|
     t.string   "session_id", :null => false
     t.text     "data"
@@ -56,6 +21,22 @@ ActiveRecord::Schema.define(:version => 20110707231905) do
 
   add_index "sessions", ["session_id"], :name => "index_sessions_on_session_id"
   add_index "sessions", ["updated_at"], :name => "index_sessions_on_updated_at"
+
+  create_table "titles", :force => true do |t|
+    t.string  "movie_name"
+    t.string  "director"
+    t.string  "image_url"
+    t.string  "video_url"
+    t.integer "rating"
+  end
+
+  create_table "titles_users", :id => false, :force => true do |t|
+    t.integer  "title_id"
+    t.integer  "user_id"
+    t.string   "rating"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "users", :force => true do |t|
     t.string   "name"
